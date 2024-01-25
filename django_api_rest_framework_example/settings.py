@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'api',
     'django_seed',
     'rest_framework',
+    'rest_framework_simplejwt',
 ]
 
 REST_FRAMEWORK = {
@@ -50,6 +51,7 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.SessionAuthentication',
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
     # Remove it to see content in markdown style in Browser
     'DEFAULT_RENDERER_CLASSES': [
